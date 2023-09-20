@@ -20,8 +20,6 @@ except:
     sign.saveCookiesToDir(cookie_path_dir)
 
 
-
-
 # Sidebar contents
 with st.sidebar:
     ## Streamlit APP
@@ -40,7 +38,7 @@ with st.sidebar:
     st.write('Made with ❤️ by Tushar & Umair')
 
 if not openai_api_key:
-    openai_api_key =  "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"   
+    openai_api_key = st.secrets["OPENAI_API_KEY"] #"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"   
     
 openai.api_key = openai_api_key
 
