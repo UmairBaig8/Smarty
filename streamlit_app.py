@@ -69,7 +69,7 @@ with input_container:
 def generate_response(prompt):
   """Generates a response to the user's input."""
 
-  response = openai.ChatCompletion.create(
+  response = openai.chat.completions.create(
     model="gpt-3.5-turbo",
     messages=[
       {
