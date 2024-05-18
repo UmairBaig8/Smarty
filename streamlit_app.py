@@ -93,8 +93,8 @@ def generate_response(prompt):
   )
 
   print(response)
-
-  return response["choices"][0]["message"]["content"]
+  return response.choices[0].message.content.strip()
+  ##return response["choices"][0]["message"]["content"]
 
 
 ## Conditional display of AI generated responses as a function of user provided prompts
